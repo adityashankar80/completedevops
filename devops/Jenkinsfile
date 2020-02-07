@@ -4,7 +4,7 @@ node {
 
      
   stage('Git-Checkout') {
-   git 'https://github.com/chakri1998/completedevops.git'
+   git 'https://github.com/adityashankar48711/completedevops.git'
   }
   stage('Input to continue forther') {
    input('git checkout done Do you want to forther proceed?')  
@@ -43,26 +43,13 @@ node {
                     def uploadSpec= """{
                         "files": [{
                         "pattern": "/root/.jenkins/workspace/devops/devops/target/*.war",
-                        "target": "devops"}]
+                        "target": "pipeline"}]
                     }"""
         server.upload(uploadSpec)
         
         }
      
-    stage('Jfrog Artifactory download'){
-    def server= Artifactory.server 'Artifactory'
-    def downloadSpec = """{
-    "files": [
-    {
-      "pattern": "devops/*.war",
-      "target": "/home/mtadminnuvepro/artifacts/"
-      
-    }
-    ]
-    }"""
-    server.download(downloadSpec)
-   
-}
+    
   stage('Input for deploy in test server') {  
    input('Do you want to test server proceed?')      
         }
@@ -92,7 +79,7 @@ notify('Job Completed')
 
 def notify(status){
     emailext (
-	to: "chakradhar1998@outlook.com",
+	to: "aditya.shankar@mindtree.com",
 	subject: "${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
 	 body: """<p>${status}: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
 	<p>Check console output at <a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a></p>""",
