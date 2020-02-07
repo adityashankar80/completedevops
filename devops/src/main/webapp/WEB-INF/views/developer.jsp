@@ -48,7 +48,7 @@
 	<img  src="https://social.mindtree.com/User%20Photos/Profile%20Pictures/M1056276_LThumb.jpg" 
 		alt="logo" style="width:10%;">
 	<div>
-		<b><i>I am Devarakonda Chakradhar</i></b><br>
+		<b><i>MY Name is Aditya Shankar</i></b><br>
 		 <p style="font-size:30px"> I am the Devops &#128540;</p>
 	</div>
 	
