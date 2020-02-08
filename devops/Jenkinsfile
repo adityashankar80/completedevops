@@ -5,11 +5,9 @@ node {
   stage('Git-Checkout') {
    git 'https://github.com/adityashankar80/completedevops.git'
   }
-  stage('Input to continue forther') {
-   input('git checkout done Do you want to forther proceed?')  
-  }
+	 
  def project_path="devops/"
- 
+	 
  dir(project_path) {
     
   stage('Maven-Clean') {
