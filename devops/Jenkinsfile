@@ -1,8 +1,7 @@
 node {
  try  {
  notify('Job Started') 
-
-     
+	 
   stage('Git-Checkout') {
    git 'https://github.com/adityashankar80/completedevops.git'
   }
