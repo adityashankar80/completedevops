@@ -45,7 +45,7 @@
 </nav>
 
 <div id = "cd-photo">
-	<img  src="https://social.mindtree.com/User%20Photos/Profile%20Pictures/M1056276_LThumb.jpg" 
+	<img  src="https://social.mindtree.com:443/User%20Photos/Profile%20Pictures/M1055392_MThumb.jpg" 
 		alt="logo" style="width:10%;">
 	<div>
 		<b><i>My Name is Aditya Shankar</i></b><br>
