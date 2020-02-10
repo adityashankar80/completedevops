@@ -42,7 +42,7 @@ node {
                     def uploadSpec= """{
                         "files": [{
                         "pattern": "/root/.jenkins/workspace/devops/devops/target/*.war",
-                        "target": "pipeline"}]
+                        "target": "petclinic"}]
                     }"""
         server.upload(uploadSpec)
         
@@ -53,7 +53,7 @@ stage('Jfrog Artifactory download'){
     def downloadSpec = """{
     "files": [
     {
-      "pattern": "pipeline/*.war",
+      "pattern": "petclinic/*.war",
       "target": "/home/mtadminnuvepro/artifacts/"
       
     }
