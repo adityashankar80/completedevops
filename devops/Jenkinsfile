@@ -47,6 +47,21 @@ node {
         server.upload(uploadSpec)
         
         }
+	 
+stage('Jfrog Artifactory download'){
+    def server= Artifactory.server 'Artifactory'
+    def downloadSpec = """{
+    "files": [
+    {
+      "pattern": "pipeline/*.war",
+      "target": "/home/mtadminnuvepro/artifacts/"
+      
+    }
+    ]
+    }"""
+    server.download(downloadSpec)
+   
+}
      
     
   stage('Input for deploy in test server') {  
